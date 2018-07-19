@@ -1,0 +1,16 @@
+body {
+    background-color: #131417;
+}
+
+header {
+    z-index: 10;
+    position: fixed;
+}
+
+.page2 {
+    min-height: 100vh;
+}
+
+.page3 {
+    height: 100vh;
+}

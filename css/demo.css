@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	background: #fff;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+	color: #57585c;
+	color: var(--color-text);
+	background-color: #fff;
+	background-color: var(--color-background);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: #5d93d8;
+	color: var(--color-link);
+	outline: none;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 3em 2em;
+}
+
+.menu {
+	position: relative;
+	z-index: 10;
+}
+
+.menu__item {
+	line-height: 1;
+	position: relative;
+	display: block;
+	margin: 1em 0;
+	outline: none;
+}

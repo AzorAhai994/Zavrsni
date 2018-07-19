@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marinko Brdarević</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style-adsila.css" />
+    <link type="text/css" rel="stylesheet" href="css/overlay.css">
+    <link rel="stylesheet" href="css/tilt.css">
+    <link rel="stylesheet" href="css/tilteffect.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/about-me.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body>
+    <!-- 0 PRELOADER -->
+    <div class="container">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <g>
+                <defs>
+                    <filter id="glow">
+                        <fegaussianblur class="blur" result="coloredBlur" stddeviation="4"></fegaussianblur>
+                        <femerge>
+                            <femergenode in="coloredBlur"></femergenode>
+                            <femergenode in="coloredBlur"></femergenode>
+                            <femergenode in="coloredBlur"></femergenode>
+                            <femergenode in="SourceGraphic"></femergenode>
+                        </femerge>
+                    </filter>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(0, 195, 255);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(78, 0, 204);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <g>
+                    <path class="outer" style="fill-opacity: 0; stroke-width: 2; stroke: url(#grad1); filter: url(#glow);" d="M256.2,87.2l203.4,337.7H52.3L256.2,87.2">
+
+                    </path>
+                </g>
+                <g>
+                    <path class="inner" style="fill-opacity: 0; stroke-width: 2; stroke: url(#grad1); filter: url(#glow);" d="M256.2,183.6l116.1,192.8H139.8L256.2,183.6">
+                    </path>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <script>
+        var overlay = document.querySelector('.container');
+
+        window.addEventListener('load', function () {
+            overlay.style.display = 'none';
+        })
+    </script>
+    <!-- end of 0 PRELOADER -->
+
+    <!-- 0.5 NAVIGATION MENU -->
+    <header>
+        <div class="navbar-header">
+            <div class="toggle-button" id="toggle">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </div>
+        </div>
+        <nav class="overlay" id="overlay">
+
+            <section class="content">
+                <nav class="menu menu--adsila">
+
+                    <a class="menu__item" href="#home">
+                        <span class="menu__item-name">HOME</span>
+
+                    </a>
+
+                    <a class="menu__item" href="#portfolio">
+                        <span class="menu__item-name">PORTFOLIO</span>
+
+                    </a>
+
+                    <a class="menu__item" href="#about-me">
+                        <span class="menu__item-name">ABOUT ME</span>
+                    </a>
+
+                    <a class="menu__item" href="#contact">
+                        <span class="menu__item-name">CONTACT</span>
+
+                    </a>
+                </nav>
+            </section>
+        </nav>
+    </header>
+    <!-- end of 0.5 NAVIGATION MENU -->
+<div id="fullpage">
+    <!-- 1 LANDING PAGE -->
+    <div class="page1 section" id="home" data-section-name="home">
+
+
+        <div class="hero">
+            <div class="hero__imgwrap">
+
+                <img class="hero__img tilt-effect cvet" data-tilt-options='{ "extraImgs" : 4, "opacity" : 0.5, "bgfixed" : false, "resetOnLeave" : false, "movement": { "perspective" : 600, "translateX" : -15, "translateY" : -15, "translateZ" : 20, "rotateX" : 15, "rotateY" : 15 } }'
+                    src="img/d3-2.svg" alt="Hero image" />
+            </div>
+
+        </div>
+    </div>
+    <!-- end of 1 LANDING PAGE -->
+
+    <!-- 2 PORTFOLIO -->
+    <div class="page2 section" id="portfolio" data-section-name="portfolio">
+
+
+        <div id="filters" class="tooltip hidden fadeInLeft">
+
+            <i class="fas fa-asterisk" data-filter="*"></i>
+
+
+            <i class="fas fa-camera" data-filter=".photos"></i>
+
+            <i class="fas fa-palette" data-filter=".logos"></i>
+            <i class="fas fa-tshirt"></i>
+            <i class="fas fa-circle-notch"></i>
+        </div>
+        <div class="grid gallery">
+            <div class="grid-sizer">
+
+            </div>
+            <a href="img/t/img (1).jpg" class="lightzoom">
+                <div class="grid-item logos" data-category="logos">
+                    <img src="img/img (1).jpg" title="LOGO" alt="">
+                </div>
+            </a>
+
+            <a href="img/img (2).jpg" class="lightzoom">
+                <div class="grid-item photos " data-category="photos">
+                    <img src="img/img (2).jpg" alt="">
+                </div>
+            </a>
+
+            <div class="grid-item photos">
+                <img src="img/img (3).jpg" alt="">
+            </div>
+            <div class="grid-item other">
+                <img src="img/img (4).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (5).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (6).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (7).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (8).jpg" alt="">
+            </div>
+            <div class="grid-item photos">
+                <img src="img/img (9).jpg" alt="">
+            </div>
+            <div class="grid-item other">
+                <img src="img/img (10).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (11).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (12).jpg" alt="">
+            </div>
+            <div class="grid-item logos">
+                <img src="img/img (13).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (14).jpg" alt="">
+            </div>
+            <div class="grid-item photos">
+                <img src="img/img (3).jpg" alt="">
+            </div>
+            <div class="grid-item other">
+                <img src="img/img (4).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (5).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (6).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (7).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (8).jpg" alt="">
+            </div>
+            <div class="grid-item photos">
+                <img src="img/img (9).jpg" alt="">
+            </div>
+            <div class="grid-item other">
+                <img src="img/img (10).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (11).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (12).jpg" alt="">
+            </div>
+            <div class="grid-item logos">
+                <img src="img/img (13).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (14).jpg" alt="">
+            </div>
+            <div class="grid-item photos">
+                <img src="img/img (3).jpg" alt="">
+            </div>
+            <div class="grid-item other">
+                <img src="img/img (4).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (5).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (6).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (7).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (8).jpg" alt="">
+            </div>
+            <div class="grid-item photos">
+                <img src="img/img (9).jpg" alt="">
+            </div>
+            <div class="grid-item other">
+                <img src="img/img (10).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (11).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (12).jpg" alt="">
+            </div>
+            <div class="grid-item logos">
+                <img src="img/img (13).jpg" alt="">
+            </div>
+            <div class="grid-item">
+                <img src="img/img (14).jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- end of 2 PORTFOLIO -->
+
+
+    <!-- 3 ABOUT ME -->
+    <div id="about-me" class="page3 section">
+        <div class="contain">
+            <a href="imgs/files/resume.pdf" id="work" class="parallaxTilt_hover animated fadeInLeft">
+                <figure class="tilter_figure">
+                    <img class="tilter_image" src="img/img_2.jpg" alt="dive" />
+                    <div id="deco" class="tilter_deco">
+                        <img class="tilter_image" src="img/img_1.png" alt="dive" />
+                    </div>
+                    <figcaption class="tilter_caption">
+                        <h3 class="tilter_title">Marinko Brdarević</h3>
+                        <p id="tag" class="tilter_tag">
+                            <span>Web designer / developer</span>
+                        </p>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+    <!-- end of 3 ABOUT ME -->
+</div>
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/fullpage.js"></script>
+    <script src="js/tiltfx.js"></script>
+    <script src="js/overlay.js"></script>
+    <script src="js/switchstyler.js"></script>
+    <script src="js/pulltorefresh.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js">
+    </script>
+    <script src="js/packery-mode.pkgd.min.js"></script>
+    <script src="js/parallaxTilt.min.js"></script>
+
+    <script>
+        var $grid = $('.grid').isotope({
+            sortBy: 'random',
+            itemSelector: '.grid-item',
+            layoutMode: 'packery',
+
+            packery: {
+                itemSelector: '.grid-item',
+                gutter: 0,
+                percentPosition: true
+
+            }
+        });
+
+        $(window).on("load", (function () {
+            var $container = $('.grid');
+        }));
+
+        // layout Isotope after each image loads
+        $grid.imagesLoaded().progress(function () {
+            $grid.isotope('layout');
+        });
+
+
+        $('#filters i').click(function () {
+            var selector = $(this).attr('data-filter');
+            $grid.isotope({
+                filter: selector
+            });
+            return false;
+        });
+    </script>
+    <script type="text/javascript">
+        (function () {
+
+            //	default opts:
+            //	parallaxMultiple: 0.1,
+            //	tiltMultiple: 0.05,
+            //      duration: 500,
+            //      easing:'easeOutExpo'
+
+            $('.tilter_image').parallaxTilt({
+                parallaxMultiple: .18,
+
+            });
+            $('.tilter_deco').parallaxTilt({
+                parallaxMultiple: .05
+            });
+            $('.tilter_caption').parallaxTilt({
+                parallaxMultiple: -(0.08)
+            });
+
+        })();
+    </script>
+    <script>
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            $(function () {
+                $('#work').hover(function () {
+
+                    $('#tag').css('border-top', '4px solid #519700');
+                }, function () {
+                    // on mouseout, reset the background colour
+
+                    $('#tag').css('border-top', '4px solid #0058fb');
+                });
+            });
+        } else {
+            $(function () {
+                $('#work').hover(function () {
+                    $('#deco').css('opacity', '1');
+                    $('#tag').css('border-top', '4px solid #1dd100');
+                }, function () {
+                    // on mouseout, reset the background colour
+                    $('#deco').css('opacity', '0');
+                    $('#tag').css('border-top', '4px solid #0058fb');
+                });
+            });
+        }
+    </script>
+    
+    <script>
+        $('#filters').switchstyler({ //fixed object
+            on: '.page2', //target section
+            addClass: 'animated',
+            removeClass: 'hidden' //classes to remove
+        });
+    </script>
+    <script>
+        var ptr = PullToRefresh.init({
+            mainElement: 'body',
+            onRefresh: function () {
+                window.location.reload();
+            }
+        });
+    </script>
+<script>
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        //options here
+        
+    });
+
+    //methods
+    
+});
+</script>
+</body>
+
+</html>
